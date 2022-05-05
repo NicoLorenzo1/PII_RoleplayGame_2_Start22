@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RoleplayGame
 {
-    public class SpellsBook
+    public class SpellsBook : IItem
     {
         public Spell[] Spells { get; set; }
         
@@ -30,6 +30,15 @@ namespace RoleplayGame
                 }
                 return value;
             }
+        }
+        public int ReturnAttack()
+        {
+            return AttackValue;
+        }
+
+        public int ReturnDefense()
+        {
+            return DefenseValue;
         }
     }
 }

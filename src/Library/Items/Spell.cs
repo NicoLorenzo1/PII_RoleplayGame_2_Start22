@@ -1,6 +1,6 @@
 namespace RoleplayGame
 {
-    public class Spell
+    public class Spell : IItem
     {
         public int AttackValue
         {
@@ -16,6 +16,15 @@ namespace RoleplayGame
             {
                 return 70;
             }
+        }
+        public int ReturnAttack()
+        {
+            return AttackValue;
+        }
+
+        public int ReturnDefense()
+        {
+            return DefenseValue;
         }
     }
 }
