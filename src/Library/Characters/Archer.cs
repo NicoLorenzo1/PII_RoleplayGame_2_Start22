@@ -1,6 +1,6 @@
 namespace RoleplayGame
 {
-    public class Archer
+    public class Archer : ICharacter
     {
         private int health = 100;
 
@@ -10,7 +10,7 @@ namespace RoleplayGame
         }
 
         public string Name { get; set; }
-        
+
         public Bow Bow { get; set; }
 
         public Helmet Helmet { get; set; }
@@ -43,6 +43,11 @@ namespace RoleplayGame
             }
         }
 
+        public void Cure()
+        {
+            this.Health = 100;
+        }
+
         public void ReceiveAttack(int power)
         {
             if (this.DefenseValue < power)
@@ -51,9 +56,9 @@ namespace RoleplayGame
             }
         }
 
-        public void Cure()
+        public void AttackEnemy(ICharacter character)
         {
-            this.Health = 100;
+            character.ReceiveAttack(AttackValue);
         }
     }
 }
