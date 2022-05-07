@@ -4,6 +4,9 @@ using RoleplayGame;
 
 namespace Test.Library
 {
+    /// <summary>
+    /// Clase CharacterTest, dentro de esta se van a verificar los metodos que los personajes tienen.
+    /// </summary>
     public class CharacterTest
     {
         /// <summary>

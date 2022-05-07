@@ -1,11 +1,10 @@
 namespace RoleplayGame
 {
     /// <summary>
-    /// Interfaz ICharacter la cual están las firmas de los metodos los cuales tienen en común los personajes.
+    /// Interfaz ICharacter donde están las firmas de los metodos que tienen en común los personajes.
     /// </summary>
     public interface ICharacter
     {
-        
         public void Cure();
 
         public void AttackEnemy(ICharacter EnemyToAttack);
