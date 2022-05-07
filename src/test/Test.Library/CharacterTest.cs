@@ -83,5 +83,27 @@ namespace Test.Library
             Assert.AreEqual(82, dwarf.Health);
             Assert.AreEqual(knight1.AttackValue, dwarf.DefenseValue + 18);
         }
+
+        /// <summary>
+        /// Se verifica el metodo recieve attack en el wizzard, con la intencón unica de verificar que funcione bien el spellbook
+        /// en el, debido a que su defensa es muy alta el dwarf no logra realizarle daño al atacarlo.
+        /// </summary>
+        [Test]
+        public void WizzardRecieveAttackTest()
+        {
+            Wizard gandalf = new Wizard("Gandalf");
+            SpellsBook book = new SpellsBook();
+            book.Spells = new Spell[] { new Spell() };
+            gandalf.Staff = new Staff();
+            gandalf.SpellsBook = book;
+
+            Dwarf dwarf = new Dwarf("Enano");
+            dwarf.Axe = new Axe();
+            dwarf.Helmet = new Helmet();
+            dwarf.Shield = new Shield();
+
+            dwarf.AttackEnemy(gandalf);
+            Assert.AreEqual(100, gandalf.Health);
+        }
     }
 }
