@@ -3,6 +3,9 @@ using RoleplayGame;
 
 namespace Test.Library
 {
+    /// <summary>
+    /// Clase ItemTest donde se testean los metodos que tienen todos los items.
+    /// </summary>
     public class ItemTest
     {
         [SetUp]
