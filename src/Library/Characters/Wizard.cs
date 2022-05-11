@@ -55,7 +55,7 @@ namespace RoleplayGame
                 this.Health -= power - this.DefenseValue;
             }
         }
-
+        
         public void AttackEnemy(ICharacter character)
         {
             character.ReceiveAttack(AttackValue);
